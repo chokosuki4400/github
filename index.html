@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content=""/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <link rel="stylesheet" href="css/style.css">
+  <!--javascript-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+  <script src="js/function.js"></script>
+
+
+<script>
+
+var str = "文字を置換するには、##replace()%%を使います。" + "括弧内の最初に##検索文字列%%、2番目に##置換文字列%%を記入します。" + "結果は、##最初にHitした文字列%%が置換された状態で返されます。";
+
+//文字を置換する
+str=str.replace(/##/g,"<strong>");
+str=str.replace(/%%/g,"</strong>");
+
+document.write(str);
+
+</script>
+
+</head>
+<body>
+<p class="demo"></p>
+    <p class="logo01">Gulp<span class="demo"></span>入門</p>
+    <p class="logo02"><img src="img/img01.jpg" alt=""></p>
+    <p class="logo02"><img src="img/img01.jpg" alt=""></p>
+</body>
+</html>

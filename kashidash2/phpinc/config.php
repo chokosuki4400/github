@@ -52,9 +52,9 @@ mysqli_set_charset($mysqli, $enc_db);
 
 $dbtype = 'mysql';
 $dbhost	= "localhost";
-$dbname	= "wts103";
-$dbuser = "wts103";
-$dbpass = "E5nG8RYp";
+$dbname	= "wts14";
+$dbuser = "root";
+$dbpass = "root";
 $dsn	= "$dbtype:host=$dbhost;dbname=$dbname;charset=$enc_db;";
 try{
 	$pdo = new PDO($dsn,$dbuser,$dbpass,

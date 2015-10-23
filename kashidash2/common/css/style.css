@@ -1,0 +1,516 @@
+@charset "utf-8";
+/* *************************************
+
+	KASHIDASH
+	style.css
+	2012.10
+
+************************************** */
+
+/* --------------------------------------------------------
+/
+/	BASE
+/
+---------------------------------------------------------- */
+html, body {height:100%; overflow-x:hidden;}
+body {
+	background:#0e052c;
+	background: url(/kashidash/common/img/bg_stars.png) repeat-x center top, 
+	-webkit-gradient(linear, left top,left bottom, color-stop(1.00, #fff), color-stop(0.46, #085a94), color-stop(0.35, #062765), color-stop(0.20, #020631), color-stop(0.00, #3c0a34));
+	background: url(/kashidash/common/img/bg_stars.png) repeat-x center top,
+	-webkit-linear-gradient(top, #3c0a34 0%, #020631 20%, #062765 35%, #085a94 46%, #fff 100%);
+	background:url(/kashidash/common/img/bg_stars.png) repeat-x center top, 
+	-moz-linear-gradient(top, #3c0a34 0%, #020631 20%, #062765 35%, #085a94 46%, #fff 100%);
+	background: url(/kashidash/common/img/bg_stars.png) repeat-x center top,
+	-o-linear-gradient(top, #3c0a34 0%, #020631 20%, #062765 35%, #085a94 46%, #fff 100%);
+	background:url(/kashidash/common/img/bg_stars.png) repeat-x center top,
+	-ms-linear-gradient(top, #3c0a34 0%, #020631 20%, #062765 35%, #085a94 46%, #fff 100%);
+	background: url(/kashidash/common/img/bg_stars.png) repeat-x center top,
+	linear-gradient(to bottom, #3c0a34 0%, #020631 20%, #062765 35%, #085a94 46%, #fff 100%);
+	color:#333;
+	font-family: ArialMT, "メイリオ",Meiryo, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+	font-size: 14px;
+	line-height: 1.25;
+	-webkit-user-select: none;
+	-webkit-text-size-adjust: none;
+}
+
+@-webkit-keyframes pulse {
+ from {
+   opacity: 1.0;
+ }
+ to {
+   opacity: 0.2;
+   left:2px;
+ }
+}
+#wrap{
+	position:absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height:100%;
+	z-index:2;}
+#bgStar{
+	background:url(/kashidash/common/img/bg_star.png) center top repeat-x;
+	position:absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	-webkit-animation-name: pulse;
+	-webkit-animation-duration: 0.8s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-delay: 0s;
+	animation-name: pulse;/* 実行する名前 */
+	animation-duration: 0.8s;/* 0.8秒かけて実行 */
+	animation-iteration-count:infinite;/* 何回実行するか。infiniteで無限 */
+	animation-timing-function:ease-in-out;/* イーズインアウト */
+	animation-direction: alternate;/* alternateにするとアニメーションが反復 */
+	animation-delay: 0s; /* 実行までの待ち時間 */
+	z-index:1;
+	}
+#contents{
+	background:url(/kashidash/common/img/bg_burn.png) -300px top no-repeat;
+	min-height: 500px;}
+
+
+
+
+/* --------------------------------------------------------
+/
+/	HEADER
+/
+---------------------------------------------------------- */
+header{
+	background:url(/kashidash/common/img/bg_header.gif) left top repeat-x;
+	padding-bottom: 20px;
+	height:87px;
+	width: 100%; 
+	/*position:fixed;
+	top:0;*/}
+	#header_in{
+		width: 98%;
+		max-width: 920px;
+		margin: 0 auto;
+		position:relative;}
+	#logo{
+		width: 255px;
+		height: 87px;
+		background:url(/kashidash/common/img/logo.png) left top no-repeat;
+		text-indent:-9999px;}
+	#btn_about{
+		display:block;
+		color: #fff;
+		width: 154px;
+		height: 24px;
+		background:url(/kashidash/common/img/bg_btn_kashidash.gif) left top no-repeat;
+		padding: 1px;
+		border-radius: 10px;
+		text-align:center;
+		text-decoration:none;
+		position: absolute;
+		right: 0;
+		top: 12px;
+		-webkit-transition: 0.5s ease-in-out;
+		-moz-transition: 0.5s ease-in-out;
+		-o-transition: 0.5s ease-in-out;
+		transition: 0.5s ease-in-out;
+		}
+		#btn_about span{
+			display:block;
+			width: 100%;
+			background-color:rgba(2,0,4,1);
+			border-radius: 10px;
+			line-height:24px;
+			-webkit-transition: 0.5s ease-in-out;}
+		#btn_about:hover{
+			background-position: right top;}
+		#btn_about span:hover{ background-color:rgba(2,0,4,0.7);}
+	
+	#btn_pageback{
+		display:block;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #068fd6), color-stop(0.52, #065388), color-stop(0.48, #1b96d6), color-stop(0.00, #1b96d6));
+		background: -webkit-linear-gradient(top, #1b96d6 0%, #1b96d6 48%, #065388 52%, #068fd6 100%);
+		background: -moz-linear-gradient(top, #1b96d6 0%, #1b96d6 48%, #065388 52%, #068fd6 100%);
+		background: -o-linear-gradient(top, #1b96d6 0%, #1b96d6 48%, #065388 52%, #068fd6 100%);
+		background: -ms-linear-gradient(top, #1b96d6 0%, #1b96d6 48%, #065388 52%, #068fd6 100%);
+		background: linear-gradient(to bottom, #1b96d6 0%, #1b96d6 48%, #065388 52%, #068fd6 100%);
+		border: solid 1px #2a133d;
+		border-radius: 3px;
+		box-shadow: inset 0px 0px 4px 0px #ffffff; 
+		color:#fff;
+		width: 150px;
+		height: 33px;
+		text-align:center;
+		line-height:33px;
+		letter-spacing:.2em;
+		text-decoration:none;
+		font-size: 1.1em;
+		position:absolute;
+		right: 0;
+		top: 67px;}
+	
+	/* border-radiusとborder-imageは同時に設定不可。いまのところ。
+	#btn_about{
+		display:block;
+		color: #fff;
+		width: 156px;
+		height: 27px;
+		border-style:solid;
+		border-image: url(/kashidash/common/img/bg_btn_kashidash.gif) 1 repeat stretch ;
+		border-width: 1px;
+		border-radius: 10px;
+		line-height:27px;
+		text-align:center;
+		text-decoration:none;
+		position: absolute;
+		right: 10px;
+		top: 12px;
+		}
+		*/
+
+/* #newsTicker
+---------------------------------------------------------- */
+#newsTicker{
+	background-color:#000;
+	border-radius: 6px;
+	box-shadow: 0px 0px 10px 0px #ffffff; 
+	height: 2.2em;
+	width: 98%;
+	max-width:920px;
+	margin: 0 auto;
+	}
+	#newsTicker #tickerList{
+		overflow:hidden;
+		padding: 0 15px;}
+	#newsTicker #tickerList li{
+		color:#fff;
+		display:inline-block;
+		margin-right: 5em;
+		line-height:2.2em;}
+
+
+/* --------------------------------------------------------
+/
+/	CONTENTS
+/
+---------------------------------------------------------- */
+#main{
+	background-color:rgba(225,226,228,0.6);
+	border-radius: 12px;
+	margin: 20px auto 0 auto;
+	padding: 16px 1.5%;
+	width: 95%;
+	max-width: 890px;}
+
+/* title caption
+---------------------------------------------------------- */
+.title01{
+	background: url(/kashidash/common/img/icon_fireball.gif) left top no-repeat,
+	-webkit-gradient(linear, left top, right top, color-stop(1.00, #030631), color-stop(0.32, #030631), color-stop(0.00, #041f5a), color-stop(0.00, #041f5a));
+	background: url(/kashidash/common/img/icon_fireball.gif) left top no-repeat,
+	-webkit-linear-gradient(left right, #041f5a 0%, #041f5a 0%, #030631 40%, #030631 100%);
+	background: url(/kashidash/common/img/icon_fireball.gif) left top no-repeat,
+	-moz-linear-gradient(left, #041f5a 0%, #041f5a 0%, #030631 40%, #030631 100%);
+	background: url(/kashidash/common/img/icon_fireball.gif) left top no-repeat,
+	-o-linear-gradient(left, #041f5a 0%, #041f5a 0%, #030631 40%, #030631 100%);
+	background: url(/kashidash/common/img/icon_fireball.gif) left top no-repeat,
+	-ms-linear-gradient(left, #041f5a 0%, #041f5a 0%, #030631 40%, #030631 100%);
+	background: url(/kashidash/common/img/icon_fireball.gif) left top no-repeat,
+	linear-gradient(to right, #041f5a 0%, #041f5a 0%, #030631 40%, #030631 100%);
+	border-radius: 4px;
+	color:#fff;
+	height: 2.4em;
+	line-height:2.4em;
+	letter-spacing:0.3em;
+	margin-bottom: 10px;
+	padding-left: 40px;
+	}
+	.title01 span.type01{ font-size: 1.1em;}
+	.title01 span.type01_p{ font-size: 1.1em;}
+	.title01 span.type02{ font-size: 0.9em;}
+
+
+/* table
+---------------------------------------------------------- */
+.k_table01{
+	width: 100%;}
+	.k_table01 td,.k_table01 th{
+		font-weight:normal;
+		text-align:center;
+		vertical-align:middle;}
+	
+	.k_table01 .cap01 th{
+		background-color: #042560;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #063474), color-stop(0.00, #021449));
+		background: -webkit-linear-gradient(#021449, #063474);
+		background: -moz-linear-gradient(#021449, #063474);
+		background: -o-linear-gradient(#021449, #063474);
+		background: -ms-linear-gradient(#021449, #063474);
+		background: linear-gradient(#021449, #063474);
+		border: solid 1px #03194e;
+		border-width: 1px 0 1px 1px;
+		/*border-bottom: solid 1px #809cc7;*/
+		color:#fff;
+		white-space:nowrap;}
+	.k_table01 .cap01 th span{
+		border: solid 1px #375d8f;
+		border-right-width:0;
+		display:block;
+		padding: 10px;
+		height: 100%;
+		/*width: 100%;*/
+		}
+	.k_table01 .cap01 th:last-child{ border-right: solid 1px #03194e;}
+	.k_table01 .cap01 .group01{ width: 60%;}
+	.k_table01 .cap01 .group02{ width: 40%;}
+	
+	.k_table01 .cap01 .item01{ width: 15%;}
+	.k_table01 .cap01 .item02{ width: 15%;}
+	.k_table01 .cap01 .item03{ width: 15%;}
+	.k_table01 .cap01 .item04{ width: 30%;}
+	.k_table01 .cap01 .item05{ width: 15%;}
+	.k_table01 .cap01 .item06{ width: 10%;}
+	
+	
+	
+	.k_table01 .cap02 th{
+		background-color: #6781b6;
+		border: solid 1px #fff;
+		border-top-width: 1px;
+		color:#fff;
+		padding: 10px;}
+	.k_table01 td{
+		border: solid 1px #809cc7;
+		/*border-top-width: 0;*/
+		background-color:#ececec;
+		/*padding: 10px;*/
+		padding: 5px 10px;}
+
+		.k_table01 td img{
+			height: 58px;}
+	.k_table01 .wi td{}
+	.k_table01 .ct td{background-color:#f0fff0}
+	.k_table01 .slp td{background-color:#fff0f0}
+	
+	.k_table01 .color td{ background-color:#c2cbdd;}
+	.k_table01 .wi.color td{ background-color:#c2cbdd;}
+	.k_table01 .ct.color td{ background-color:#c2ddc2;}
+	.k_table01 .slp.color td{ background-color:#ddc2c2;}
+	
+	.k_table01 th.boundary,
+	.k_table01 td.boundary{
+		border-right: solid 2px #3b5a98;}
+	.k_table01 .nowwrap{ white-space: nowrap;}
+	.k_table01 .txleft{ text-align:left;}
+	
+	
+	.k_table02 tr:nth-child(2n) td{ background-color: #c2cbdd;}
+	
+	
+/* btn
+---------------------------------------------------------- */
+.btn_return{
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #808181), color-stop(0.52, #2c2c2c), color-stop(0.48, #636363), color-stop(0.00, #636363));
+	background: -webkit-linear-gradient(top, #636363 0%, #636363 48%, #2c2c2c 52%, #808181 100%);
+	background: -moz-linear-gradient(top, #636363 0%, #636363 48%, #2c2c2c 52%, #808181 100%);
+	background: -o-linear-gradient(top, #636363 0%, #636363 48%, #2c2c2c 52%, #808181 100%);
+	background: -ms-linear-gradient(top, #636363 0%, #636363 48%, #2c2c2c 52%, #808181 100%);
+	background: linear-gradient(to bottom, #636363 0%, #636363 48%, #2c2c2c 52%, #808181 100%);
+	border: solid 1px #363636;
+	border-radius: 3px;
+	box-shadow: inset 0px 0px 4px 0px #ffffff; 
+	color:#fff;
+	display:block;
+	font-size: 1.2em;
+	height: 33px;
+	line-height:33px;
+	letter-spacing:.2em;
+	margin: 5px auto;
+	text-align:center;
+	text-decoration:none;
+	width: 108px;
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	}
+
+.btn_lend{
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #b41a1a), color-stop(0.52, #770505), color-stop(0.48, #bc3434), color-stop(0.00, #bc3434));
+	background: -webkit-linear-gradient(top, #bc3434 0%, #bc3434 48%, #770505 52%, #b41a1a 100%);
+	background: -moz-linear-gradient(top, #bc3434 0%, #bc3434 48%, #770505 52%, #b41a1a 100%);
+	background: -o-linear-gradient(top, #bc3434 0%, #bc3434 48%, #770505 52%, #b41a1a 100%);
+	background: -ms-linear-gradient(top, #bc3434 0%, #bc3434 48%, #770505 52%, #b41a1a 100%);
+	background: linear-gradient(to bottom, #bc3434 0%, #bc3434 48%, #770505 52%, #b41a1a 100%);
+	border: solid 1px #7e0606;
+	border-radius: 3px;
+	box-shadow: inset 0px 0px 4px 0px #ffffff; 
+	color:#fff;
+	display:block;
+	font-size: 1.2em;
+	/*
+	height: 72px;
+	line-height:72px;
+	*/
+	height: 42px;
+	line-height:42px;
+
+	letter-spacing:.2em;
+	margin: 5px auto;
+	text-align:center;
+	text-decoration:none;
+	width: 108px;
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	}
+
+.btn_apply{
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #b41a1a), color-stop(0.52, #770505), color-stop(0.48, #bc3434), color-stop(0.00, #bc3434));
+	background: -webkit-linear-gradient(top, #bc3434 0%, #bc3434 48%, #770505 52%, #b41a1a 100%);
+	background: -moz-linear-gradient(top, #bc3434 0%, #bc3434 48%, #770505 52%, #b41a1a 100%);
+	background: -o-linear-gradient(top, #bc3434 0%, #bc3434 48%, #770505 52%, #b41a1a 100%);
+	background: -ms-linear-gradient(top, #bc3434 0%, #bc3434 48%, #770505 52%, #b41a1a 100%);
+	background: linear-gradient(to bottom, #bc3434 0%, #bc3434 48%, #770505 52%, #b41a1a 100%);
+	border: solid 1px #7e0606;
+	border-radius: 3px;
+	box-shadow: inset 0px 0px 4px 0px #ffffff; 
+	color:#fff;
+	cursor:pointer;
+	display:block;
+	font-size: 1.2em;
+	height: 56px;
+	line-height:56px;
+	margin: 0 auto;
+	text-align:center;
+	text-decoration:none;
+	width: 214px;
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	}
+	.btn_return:hover,
+	.btn_lend:hover,
+	.btn_apply:hover{
+		box-shadow: inset 0px 0px 8px 0px #ffffff;
+		text-shadow: 0px 0px 10px #fff;} 
+
+
+/* font
+---------------------------------------------------------- */
+.txColor01{ color: #ac2929;}
+
+
+/* .pagetop
+---------------------------------------------------------- */
+.pagetop{
+	margin:0 auto;
+	width:80%;
+	text-align:right;
+	padding: 12px 0 24px;}
+	.pagetop a{
+		color:#0f052c;
+		text-decoration:none;}
+	
+
+/* #entryForm
+---------------------------------------------------------- */
+#entryForm{
+	border-bottom: solid 1px #fff;
+	padding: 18px 24px 35px 24px;
+	overflow:hidden;
+	/*display:-webkit-box;
+	display:-moz-box;
+	display:box;*/}
+	#entryForm .photo{
+		float:left;
+		padding-right: 3%;
+		width:16%;}
+		#entryForm .photo img{
+			border: solid 2px #fff;
+			max-width:100%;
+			text-align:center;}
+	#entryForm .entry{
+		width: 70%; float:left;}
+	#entryForm .entry .entry_in{
+		display:inline-block;
+		padding-bottom: 10px;}
+		#entryForm .entry01{width: 30%;}
+		#entryForm .entry02{width: 35%;}
+		#entryForm .entry03{width: 30%;}
+		#entryForm .entry04{width: 100%;}
+	#entryForm .entry p{
+		color:#05225a;}
+	#entryForm input[type=text],
+	#entryForm select{padding: 5px;}
+	#entryForm input[type=text]{ width:80%;}
+	#entryForm textarea{ width: 98%; padding: 5px;}
+	
+#entryBtn{
+	border-top: solid 1px #5d83b5;
+	padding:14px 0;
+}
+
+
+/* about
+---------------------------------------------------------- */
+#about p{
+ font-size:13px;
+ margin-bottom:15px;
+ line-height:135%;
+}
+
+#about .spc1{
+ margin-bottom:20px;
+}
+
+
+#about h3{
+ font-size:17px;
+ margin-bottom:10px;
+ font-weight:bold;
+}
+
+
+#about h4{
+ font-size:15px;
+ margin-bottom:15px;
+ font-weight:bold;
+}
+
+#about h5{
+ font-size:14px;
+ margin-bottom:5px;
+ font-weight:bold;
+}
+
+
+
+/* --------------------------------------------------------
+/
+/	FOOTER
+/
+---------------------------------------------------------- */
+footer{
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.12, #000), color-stop(0.00, #679ec1));
+	background: -webkit-linear-gradient(top, #679ec1 0%, #000 12%);
+	background: -moz-linear-gradient(top, #679ec1 0%, #000 12%);
+	background: -o-linear-gradient(top, #679ec1 0%, #000 12%);
+	background: -ms-linear-gradient(top, #679ec1 0%, #000 12%);
+	background: linear-gradient(to bottom, #679ec1 0%, #000 12%);
+	height: 66px;
+	width:100%;
+/*	position:fixed;*/
+	bottom: 0;}
+	footer p{
+		width: 80%;
+		margin: 0 auto;
+		color:#fff;
+		line-height:66px;
+		text-align:right;}

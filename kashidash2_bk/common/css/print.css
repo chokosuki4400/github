@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* *************************************
+
+	KASHIDASH
+	print.css
+	2013.02
+
+************************************** */
+header, footer, form, #tablePagination, .pagetop, #bgStar, .print_d, .noprint,.btn {
+	display:none!important;
+}
+body {
+	background:#FFF;
+	color:#000;
+	font-family: ArialMT, "メイリオ", Meiryo, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+	font-size: 12px;
+	line-height: 1.25;
+  -webkit-print-color-adjust: exact;
+}
+table, td, th, tr, .cap1, cap1 span,.panel
+ {
+	border: solid 1px #333 !important;
+	background-color:#FFF !important;
+	color:#000 !important;
+	font-size: 9px !important;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 0;
+}
+.panel >.panel-heading{
+	border: none;
+	background: #fff;
+	color: #000;
+}
+div.row > div .media{
+	font-size: 10pt!important;
+}
+div.row > div .media .info2 em{
+	font-size: 12pt!important;
+	font-style: normal;
+}
+.label{
+	background: #000;
+	color: #fff;
+	font-size: 10pt!important;
+}
+#contents {
+	background:url(/);
+}
+#main {
+	background-color:#FFF;
+	border-radius:0px;
+}
+.k_table01 .cap01 th {
+	background-color: #CCCCCC !important;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #FFF), color-stop(0.00, #FFF));
+	background: -webkit-linear-gradient(#FFF, #FFF);
+	background: -moz-linear-gradient(#FFF, #FFF);
+	background: -o-linear-gradient(#FFF, #FFF);
+	background: -ms-linear-gradient(#FFF, #FFF);
+	background: linear-gradient(#FFF, #FFF);
+	border: solid 1px #FFF, #FFF;
+	border-width: 1px 0 1px 1px;
+	color:#000;
+	white-space:nowrap;
+}
+.k_table01 .cap01 th span {
+	border: solid 1px #FFF;
+	border-right-width:0;
+	display:block;
+	padding: 3px;
+	height: 100%;/*width: 100%;*/
+	background-color: #CCCCCC ;
+		}
+		
+		
+	.k_table01 .cap01 .group01{ width: 60%;}
+	.k_table01 .cap01 .group02{ width: 40%;}
+	
+	.k_table01 .cap01 .item01{ width: 10%;}
+	.k_table01 .cap01 .item02{ width: 10%;}
+	.k_table01 .cap01 .item03{ width: 10%;}
+	.k_table01 .cap01 .item04{ width: 45%;}
+	.k_table01 .cap01 .item05{ width: 15%;}
+	.k_table01 .cap01 .item06{ width: 10%;}
+	
+
+	
+	.k_table01 .cap02 th{
+		background-color: #CCCCCC !important;
+		border: solid 1px #000 !important;
+		border-top-width: 1px;
+		color:#000 !important;
+		padding: 3px;}
+	.k_table01 td{
+		border: solid 1px #809cc7;
+		/*border-top-width: 0;*/
+		background-color:#ececec;
+		padding: 3px;}
+	.k_table01 .txleft{ text-align:left;}
+	
+	
+
+
+	
+.title01 {
+	background: url(/) left top no-repeat,  -webkit-gradient(linear, left top, right top, color-stop(1.00, #FFF), color-stop(0.32, #FFF), color-stop(0.00, #FFF), color-stop(0.00, #FFF));
+	background: url(/) left top no-repeat,  -webkit-linear-gradient(left right, #FFF 0%, #FFF 0%, #FFF 40%, #FFF 100%);
+	background: url(/) left top no-repeat,  -moz-linear-gradient(left, #FFF 0%, #FFF 0%, #FFF 40%, #FFF 100%);
+	background: url(/) left top no-repeat,  -o-linear-gradient(left, #FFF 0%, #FFF 0%, #FFF 40%, #FFF 100%);
+	background: url(/) left top no-repeat,  -ms-linear-gradient(left, #FFF 0%, #FFF 0%, #FFF 40%, #FFF 100%);
+	background: url(/) left top no-repeat,  linear-gradient(to right, #FFF 0%, #FFF 0%, #FFF 40%, #FFF 100%);
+	border-radius: 4px;
+	color:#000;
+	height: 2.4em;
+	line-height:2.4em;
+	letter-spacing:0.3em;
+	margin-bottom: 10px;
+	padding-left: 40px;
+}
+.title01 span.type01 {
+	font-size: 1.1em;
+	width:100%;
+	text-align:center;
+	display:block;
+	float:left;
+	font-weight: bold;
+	text-decoration: underline;	
+}
+
+.title01 span.type01:after {content: " 貸出台帳" }
+
+.title01 span.type01_p {
+	font-size: 10px !important;
+	font-weight:none !important;
+	clear:both;
+	float:right;
+	display:block;
+	width:100%;
+	text-align:right;
+	letter-spacing: 0.1em;
+}
+.title01 span.type02 {
+	font-size: 0.9em;
+}

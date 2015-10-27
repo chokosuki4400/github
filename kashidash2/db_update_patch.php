@@ -30,7 +30,7 @@ $uploadFileSize = 10000;//アップロードできるファイルサイズ（単
 if(($type == 'device') && ($_FILES['file_device']['error']==0)){
 	$title		= "Device Update";
 	$uploadDir	= $_SERVER['DOCUMENT_ROOT'].'/kashidash2/device/';
-	
+
 	// フォルダの書き込み権限チェック
 	if(!is_writable($uploadDir)){
 		$uploadErr = 2;
@@ -39,7 +39,7 @@ if(($type == 'device') && ($_FILES['file_device']['error']==0)){
 		// アップロードファイル名決定
 		$name		= 'device'.date('Ymd-His').'.csv';
 		$uploadFile	= $uploadDir.$name;
-		
+
 		try{
 			// エラー判定
 			if(!isset($_FILES['file_device']['error']) || is_array($_FILES['file_device']['error'])){
@@ -98,7 +98,7 @@ if(($type == 'device') && ($_FILES['file_device']['error']==0)){
 			    }
 		    }
 */
-		    
+
 		    $file_contents = file_get_contents($_FILES['file_device']['tmp_name']);
 		    touch($uploadFile);
 			if(!chmod($uploadFile, 0777)){
@@ -109,12 +109,12 @@ if(($type == 'device') && ($_FILES['file_device']['error']==0)){
 			    throw new RuntimeException('ファイルのアップロードに失敗しました。');
 			    $uploadErr = 2;
 		    }
-		    
+
 			$uploadErr = 1;
 			$file_name = $_FILES['file_device']['name'];
 			$errStr = $file_name.' のアップロードに成功しました<br>';
 			$errStr .= '（'.$uploadFile.'）<hr>';
-			
+
 		} catch (RuntimeException $e){
 			$uploadErr = 2;
 			$errStr = $e->getMessage();
@@ -128,7 +128,7 @@ if($uploadErr == 1){
 	$data = mb_convert_encoding($data, 'UTF-8','sjis-win');
 	$temp = tmpfile();
 	$csv = array();
-	
+
 	fwrite($temp, $data);
 	rewind($temp);
 
@@ -141,7 +141,7 @@ if($uploadErr == 1){
 	$insertCount = 0;
 	foreach($csv as $key => $val){
 		if(($key != 0) && ($val[0] != '')){
-		
+
 			$sql = 'SELECT C>0 AS IS_EXIST FROM(SELECT count( * ) AS C FROM device WHERE device_id=:device_id) AS DAMMY';
 			$stmt = $pdo->prepare($sql);
 			$stmt->bindParam(':device_id',$val[0]);
@@ -182,7 +182,7 @@ if($uploadErr == 1){
 				    print "Exception";
 				    print $e->getMessage();
 				}
-				//$debug_str .=$ret; 
+				//$debug_str .=$ret;
 				$updateCount ++;
 			} else {
 				$sql = 'INSERT INTO device (device_id,d_flg,administrator,name,os,version_major,version_minor,misc,img,create_date) VALUES  (:device_id,:d_flg,:administrator,:name,:os,:version_major,:version_minor,:misc,:img,:create_date)';
@@ -205,8 +205,8 @@ if($uploadErr == 1){
 	$errStr .= ($insertCount != 0) ? "$insertCount 件のデータが追加されました<br>":'';
 	$errStr .= ($updateCount != 0) ? "$updateCount 件のデータが更新されました":'';
 	//$stmt = $pdo->query();
-	
-	
+
+
 	// verifier update
 	$updatVCount = 0;
 	foreach($csv as $key => $val){
@@ -230,12 +230,12 @@ if($type == 'download'){
 	$csv = array(
 		array('管理番号','削除フラグ','管理グループ','機種名','OS','メジャーバージョン','サブバージョン','備考','画像ファイル名','作成日','更新日'),
 	);
-	
+
 	// DBからデータ取得
 	$sql = 'SELECT * FROM device ORDER BY device_id ASC';
 	$stmt = $pdo->prepare($sql);
 	$stmt->execute();
-	
+
 	while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
 		$tmp[] = array(
 			$row['device_id'],
@@ -264,11 +264,11 @@ if($type == 'download'){
 	touch($outputFile);
 	chmod($outputFile, 0777);
 	$fp = fopen($outputFile,'w');
-	
+
 	foreach($rows as $line){
 		fputcsv($fp, $line, ',', '"');
 	}
-	
+
 	fclose($fp);
 	header("Content-Type: application/csv");
 	header("Content-Disposition: attachment; filename=".$csvFileName);
@@ -284,7 +284,7 @@ $active = 0;
 include_once('template/head.php');
 ?>
 <body>
-<?php 
+<?php
 include_once('template/header.php');
 ?>
 <div class="container">
@@ -334,7 +334,7 @@ include_once('template/header.php');
 				</aside>
 			</div>
 		</form>
-		
+
 	</div><!-- /Device Update -->
 	<hr>
 	<div class="row">
@@ -354,7 +354,7 @@ include_once('template/header.php');
 			</div>
 -->
 		</form>
-		
+
 	</div><!-- /Download Device list -->
 	<hr>
 	<!--
@@ -368,7 +368,7 @@ include_once('template/header.php');
 				<input type="hidden" name="type" value="device">
 				<input type="hidden" name="file_name" value="<?php echo $name ?>">
 				<input type="file" name="file_device" id="file_device" style="display:none;" value="">
-				
+
 				<div class="form-group">
 					<label class="sr-only" for="device_id">デバイスID</label>
 					<input type="text" class="form-control" id="device_id" name="device_id" maxlength="10" placeholder="e.g. WI-001" value="">

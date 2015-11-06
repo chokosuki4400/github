@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+.download_main {
+	width: 100%;
+	background: url(/img/download/main_bg.jpg) center top no-repeat;
+}
+
+.download_inner {
+	position: relative;
+}
+
+.download__logo {
+	position: absolute;
+	top: 86px;
+	left: 50%;
+	margin: 0 0 0 -233px;
+}
+
+.download__txt {
+	position: absolute;
+	top: 285px;
+	left: 50%;
+	margin: 0 0 0 -188px;
+}
+
+.download_btn {
+	position: absolute;
+	top: 435px;
+	left: 50%;
+	margin: 0 0 0 -240px;
+}
+
+.download_btn__item {
+	display: inline-block;
+	margin: 0 0 0 16px;
+
+	&:first-child {
+		margin: 0;
+	}
+}
+
+.download__ej_logo {
+	position: absolute;
+	top: 561px;
+	left: 50%;
+	margin: 0 0 0 -121px;
+}

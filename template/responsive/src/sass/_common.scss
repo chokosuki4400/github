@@ -1,0 +1,44 @@
+/* normalize.cssを補うCSS */
+html {
+  font-size:62.5%;
+}
+
+a {
+  outline:none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ol,ul,li {
+  margin:0;
+  padding:0;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+body {
+  font-family: "Lato",Helvetica, Arial, "游ゴシック","YuGothic",'ヒラギノ角ゴ ProN W3',"Hiragino Kaku Gothic ProN","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Meiryo","ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+  // font-weight: 400;
+  // color: #2a2a2a;
+  color: #030303;
+  line-height: 1;
+  letter-spacing: 0;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ソーシャル
+-----------------------------------*/
+
+/* hover
+-----------------------------------*/
+
+/* 汎用クラス
+-----------------------------------*/
+
